@@ -7,7 +7,7 @@ from datetime import datetime,timedelta
 API_KEY= "kUkGiCxLXwQzP6wtuTkxx2ggpyHJg8swHuHv8jye"
 
 def test_api():
-    res = requests.get("https://api.nasa.gov/planetary/apod?api_key=kUkGiCxLXwQzP6wtuTkxx2ggpyHJg8swHuHv8jye")
+    res = requests.get(f"https://api.nasa.gov/planetary/apod?api_key={API_KEY}")
     if res.status_code!=200:
         return False
     return True
