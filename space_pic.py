@@ -21,6 +21,10 @@ def get_pic_of_day():
     return res
 
 if __name__ == "__main__":
+    if not test_api():
+        print("api is not up now")
+        exit()
+
     for pic in get_pic_of_day().json():
         res = requests.get(pic["url"])
         ext = pic["url"].split(".")[-1]
